@@ -1,0 +1,250 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto',sans-serif;
+}
+body{
+    min-height: 100vh;
+}
+
+.container{
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 0 4%;
+}
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100px;
+}
+nav .menu-icon{
+    cursor: pointer;
+    display: none;
+}
+
+nav .log {
+    width: 40px;
+}
+ nav .logo {
+    list-style: none;
+}
+nav ul{
+    display: flex;
+    list-style: none;
+    align-items: center;
+}
+nav ul li{
+    padding: 0 15px;
+}
+nav ul li a{
+    text-decoration: none;
+    font-size: 17px;
+    color: #ffffff;
+}
+.navigation_link {
+    font-size: 14px;
+    font-weight: 300;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+
+    position: relative;
+}
+.navigation_link:hover {
+    color: #C51212;
+    transition: all .3s;
+}
+.navigation_link::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -2px;
+
+    width: 60%;
+    height: 1px;
+    background: #C51212;
+
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 0.4s;
+}
+.navigation_link:hover::after {
+    transform: scaleX(1);
+    transform-origin: left;
+    transition: transform 0.4s;
+}
+
+main{
+    margin-top: 5%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+section .dev {
+    text-align: center;
+    text-decoration: none;
+    color: white;
+    margin-bottom: 50px
+}
+section .dev:hover {
+    color: #C51212;
+    transition: all .5s;
+}
+section{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 5px 25px;
+    background: #202020b6;
+    border-radius: 10px;
+    width: 450px;
+    height: 450px;
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+}
+section h2{
+    color: #f5f5f5;
+    font-size: 1.8rem;
+    margin: 2rem;
+}
+section form{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+form label{
+    color: #f5f5f5;
+    font-size: 15px;
+    margin-bottom: 4px;
+}
+form input{
+    padding: 15px;
+    outline: none;
+    border: 0;
+    height: 20px;
+    margin-bottom: 20px;
+    font-size: 12px;
+    transition: all 0.5s;
+}
+form input:focus{
+    border-radius: 10px;
+}
+form textarea{
+    padding: 10px;
+    outline: none;
+    border: 0;
+    font-size: 15px;
+    margin-bottom: 30px;
+    height: 50px;
+    transition: all 0.5s;
+}
+form textarea:focus{
+    border-radius: 10px;
+}
+form button{
+    padding: 15px;
+    cursor: pointer;
+    font-size: 16px;
+    color: #f5f5f5;
+    transition: all 1s;
+    margin-bottom: 20px;
+    border: 2px solid #4c4946;
+    background-color: #2a2928;
+}
+form button:hover{
+    background-color: #424242c4;
+    color: antiquewhite;
+    
+}
+
+/*Página do Obrigado*/
+
+.main{
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   min-height: 100vh;
+   flex-direction: column;
+}
+.text{
+    font-size: 25px;
+    color: #f5f5f5;
+    margin-bottom: 30px;
+}
+.paragrafo{
+    color: #f5f5f5;
+    margin-bottom: 50px;
+}
+.btn{
+    padding: 15px 55px;
+    background: transparent;
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 18px;
+    transition: all 0.5s;
+    border: 2px solid #4c4946;
+    background-color: #2a2928;
+}
+.btn:hover{
+    background-color: #353535c4;
+    border-radius: 16px;
+}
+
+body .obg {
+    width: 400px;
+    margin-bottom: 50px;
+}
+#background {
+    position: fixed;
+    inset : 0;
+    z-index: -1;
+    width: 100%;
+    height: 100vh;
+}
+#background img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+#background::after {
+    content: '';
+    width: inherit;
+    height: inherit;
+    position: fixed;
+    inset: 0;
+    background: linear-gradient(109deg, rgba(10, 12, 16, 0.99) 15%, rgba(10, 12, 16, 0.7) 50%, rgba(10, 12, 16, 0.99) 85%);
+
+}
+@media (max-width:970px) {
+    nav .menu-icon{
+        display: block;
+    }
+    nav ul{
+        position: fixed;
+        width: 60%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        transform: translateX(-100%);
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        justify-content: center;
+        transition: 0.3s ease-in;
+        background-color: #272727;
+    }
+    nav ul.active{
+        transform: translateX(0);
+    }
+    nav ul li{
+        padding: 10px;
+    }
+    nav ul li a{
+        font-size: 18px;
+        color: white;
+    }
+   
+}
