@@ -15,8 +15,8 @@ menuBar.addEventListener('click',function(){
 
 
 function rustDonwloadv25() {
-    window.open("https://encurtalink.online/rustv25remake", target="_blank")
+    window.open("https://mega.nz/file/7YZxlaoC#Eeum1zHXhg0eKyqd9JSshd4Vtk0mG9IeCK1zDheO4xI", target="_blank")
 }
 function rustDownloadv13() {
-    window.open("https://encurtalink.online/rustv1381", target="_blank")
+    window.open("https://www.mediafire.com/file/smgofq3h0ejs8rx/Rust_by_Mateus_PSK.rar/file", target="_blank")
 }
